@@ -41,8 +41,7 @@ h3 {
 <body>
 	<h3>Bem vindo mundo Java !!!</h3>
 
-	<form action="ServletLogin" method="post"
-		onsubmit="return validardados()? true : false">
+	<form action="ServletLogin" method="post">
 
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">
@@ -50,16 +49,16 @@ h3 {
 		<div class="col-md-6">
 			<label class="form-label" for="login">Login</label> <input
 				class="form-control" id="login" name="login" type="text" required>
-			<div class="invalid-feedback">Obrigatório</div>
-			<div class="valid-feedback">ok</div>
+			<!-- <div class="invalid-feedback">Obrigatório</div>
+			<div class="valid-feedback">ok</div> -->
 		</div>
 
 		<div class="col-md-6">
 			<label class="form-label" for="senha">Senha</label> <input
 				class="form-control" id="senha" name="senha" type="password"
 				required>
-			<div class="invalid-feedback">Obrigatório</div>
-			<div class="valid-feedback">ok</div>
+			<!-- <div class="invalid-feedback">Obrigatório</div>
+			<div class="valid-feedback">ok</div> -->
 		</div>
 		<div class="row">
 			<div><input type="submit" value="Acessar" class="col-20 col-sm-6"></div>
@@ -71,7 +70,7 @@ h3 {
 			crossorigin="anonymous"></script>
 
 	</form>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function validardados() {
 			var login = document.getElementById("login").value;
 			var senha = document.getElementById("senha").value;
@@ -88,6 +87,6 @@ h3 {
 			}
 			return true;
 		}
-	</script>
+	</script> -->
 </body>
 </html>

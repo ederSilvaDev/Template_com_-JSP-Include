@@ -16,7 +16,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns = { "/principal/*" }) /* Interceptas todas as requisiçoes que vierem do projeto ou mapeamento */
+@WebFilter(urlPatterns = {"/principal/*"}) /* Interceptas todas as requisiçoes que vierem do projeto ou mapeamento */
 public class FilterAutenticao implements Filter {
 
 	private static Connection connection;
