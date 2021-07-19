@@ -9,7 +9,7 @@
 <body>
 <h1> Entre em contato com o Pessoal do Suporte do Site !</h1>
 <%
-	out.println(request.getAttribute("msg"));
+	out.print(request.getAttribute("msg"));
 %>
 
 </body>

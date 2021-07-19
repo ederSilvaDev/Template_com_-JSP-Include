@@ -2,6 +2,54 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="pt">
+<head>
+	<title>Quantum Able Bootstrap 4 Admin Dashboard Template</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="description" content="codedthemes">
+	<meta name="keywords"
+		  content=", Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+	<meta name="author" content="codedthemes">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" href="<%= request.getContextPath() %>/assets/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="<%= request.getContextPath() %>/assets/images/favicon.ico" type="image/x-icon">
+
+	<!-- Google font-->
+   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link href="<%= request.getContextPath() %>/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!--ico Fonts-->
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/icon/icofont/css/icofont.css">
+
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/plugins/bootstrap/css/bootstrap.min.css">
+
+	<!-- waves css -->
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/plugins/Waves/waves.min.css">
+
+	<!-- Style.css -->
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/main.css">
+
+	<!-- Responsive.css-->
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/responsive.css">
+
+	<!--color css-->
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/assets/css/color/color-1.min.css" id="color"/>
+
+</head>
 
 <jsp:include page="head.jsp"></jsp:include>
 
@@ -14,8 +62,8 @@
 	<div class="wrapper">
 		<!-- Navbar-->
 		<header class="main-header-top hidden-print">
-			<a href="index.html" class="logo"><img
-				class="img-fluid able-logo" src="assets/images/logo.png"
+			<a href="<%= request.getContextPath() %>/principal/principal.jsp" class="logo"><img
+				class="img-fluid able-logo" src="<%= request.getContextPath() %>/assets/images/logo.png"
 				alt="Theme-logo"></a>
 
 			<jsp:include page="navbar.jsp"></jsp:include>
@@ -70,31 +118,31 @@
               <ul class="iew-download">
                   <li>
                       <a href="http://www.google.com/chrome/">
-                          <img src="assets/images/browser/chrome.png" alt="Chrome">
+                          <img src="/assets/images/browser/chrome.png" alt="Chrome">
                           <div>Chrome</div>
                       </a>
                   </li>
                   <li>
                       <a href="https://www.mozilla.org/en-US/firefox/new/">
-                          <img src="assets/images/browser/firefox.png" alt="Firefox">
+                          <img src="/assets/images/browser/firefox.png" alt="Firefox">
                           <div>Firefox</div>
                       </a>
                   </li>
                   <li>
                       <a href="http://www.opera.com">
-                          <img src="assets/images/browser/opera.png" alt="Opera">
+                          <img src="/assets/images/browser/opera.png" alt="Opera">
                           <div>Opera</div>
                       </a>
                   </li>
                   <li>
                       <a href="https://www.apple.com/safari/">
-                          <img src="assets/images/browser/safari.png" alt="Safari">
+                          <img src="/assets/images/browser/safari.png" alt="Safari">
                           <div>Safari</div>
                       </a>
                   </li>
                   <li>
                       <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                          <img src="assets/images/browser/ie.png" alt="">
+                          <img src="/assets/images/browser/ie.png" alt="">
                           <div>IE (9 & above)</div>
                       </a>
                   </li>
@@ -107,9 +155,6 @@
 
 	<jsp:include page="javascript.jsp"></jsp:include>
 
-
-</body>
-
 <!-- Warning Section Starts -->
 <!-- Older IE warning message -->
 <!--[if lt IE 9]>
@@ -120,31 +165,31 @@
               <ul class="iew-download">
                   <li>
                       <a href="http://www.google.com/chrome/">
-                          <img src="assets/images/browser/chrome.png" alt="Chrome">
+                          <img src="/assets/images/browser/chrome.png" alt="Chrome">
                           <div>Chrome</div>
                       </a>
                   </li>
                   <li>
                       <a href="https://www.mozilla.org/en-US/firefox/new/">
-                          <img src="assets/images/browser/firefox.png" alt="Firefox">
+                          <img src="/assets/images/browser/firefox.png" alt="Firefox">
                           <div>Firefox</div>
                       </a>
                   </li>
                   <li>
                       <a href="http://www.opera.com">
-                          <img src="assets/images/browser/opera.png" alt="Opera">
+                          <img src=">/assets/images/browser/opera.png" alt="Opera">
                           <div>Opera</div>
                       </a>
                   </li>
                   <li>
                       <a href="https://www.apple.com/safari/">
-                          <img src="assets/images/browser/safari.png" alt="Safari">
+                          <img src="/assets/images/browser/safari.png" alt="Safari">
                           <div>Safari</div>
                       </a>
                   </li>
                   <li>
                       <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                          <img src="assets/images/browser/ie.png" alt="">
+                          <img src="/assets/images/browser/ie.png" alt="">
                           <div>IE (9 & above)</div>
                       </a>
                   </li>
