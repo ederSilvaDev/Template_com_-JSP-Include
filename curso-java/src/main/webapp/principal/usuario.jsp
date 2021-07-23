@@ -2,7 +2,6 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
 <title>Cadastro de Usuario</title>
 <meta charset="utf-8">
@@ -78,12 +77,12 @@
 		<jsp:include page="main-sidebar.jsp"></jsp:include>
 
 
-		<div class="content-wrapper waves-effect waves-light">
+		<div class="content-wrapper">
 			<!-- Container-fluid starts -->
 			<!-- Main content starts -->
-			<div class="container-fluid waves-effect waves-light">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="main-header waves-effect waves-light">
+					<div class="card-header">
 						<!-- Textual inputs starts -->
 						<div class="col-lg-12">
 							<div class="card">
@@ -100,12 +99,12 @@
 									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"
+												<!-- <button type="button" class="close" data-dismiss="modal"
 													aria-label="Close">
 													<span aria-hidden="true">&times;</span>
 												</button>
 												<h5 class="modal-title">Code Explanation For Textual
-													Input Types</h5>
+													Input Types</h5> -->
 											</div>
 											<!-- end of modal-header -->
 											<div class="modal-body">
@@ -258,64 +257,193 @@
 									<!-- end of modal-dialog -->
 								</div>
 								<!-- end of modal -->
-								<form>
-									<div class="form-row waves-effect waves-light">
-											<div class="col-md-4 mb-3">
-												<label for="validationDefault01">Primeiro nome</label> <input
-													type="text" class="form-control" id="validationDefault01"
-													placeholder="Nome" value="Mark" required>
-											</div>
-											<div class="col-md-4 mb-3">
-												<label for="validationDefault02">Sobrenome</label> <input
-													type="text" class="form-control" id="validationDefault02"
-													placeholder="Sobrenome" value="Otto" required>
-											</div>
-											<div class="col-md-4 mb-3">
-												<label for="validationDefaultUsername">Usuário</label>
-												<div class="input-group">
-													<div class="input-group-prepend">
-														<span class="input-group-text" id="inputGroupPrepend2">@</span>
-													</div>
-													<input type="text" class="form-control"
-														id="validationDefaultUsername" placeholder="Usuário"
-														aria-describedby="inputGroupPrepend2" required>
-												</div>
+								<div class="card-block">
+									<form class="form-material"
+										action="<%=request.getContextPath()%>/ServletUsuarioController"
+										method="post" id="formUser">
+
+										<input type="hidden" name="acao" id="acao" value="">
+
+										<div class="form-group row">
+											<label for="id"
+												class="col-xs-2 col-form-label form-control-label">ID</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="id" name="id"
+													readonly="readonly" value="${modelLogin.id}">
 											</div>
 										</div>
-										<div class="form-row waves-effect waves-light">
-											<div class="col-md-6 mb-3">
-												<label for="validationDefault03">Cidade</label> <input
-													type="text" class="form-control" id="validationDefault03"
-													placeholder="Cidade" required>
-											</div>
-											<div class="col-md-3 mb-3">
-												<label for="validationDefault04">Estado</label> <input
-													type="text" class="form-control" id="validationDefault04"
-													placeholder="Estado" required>
-											</div>
-											<div class="col-md-3 mb-3">
-												<label for="validationDefault05">CEP</label> <input
-													type="text" class="form-control" id="validationDefault05"
-													placeholder="CEP" required>
+
+										<div class="form-group row">
+											<label for="login"
+												class="col-xs-2 col-form-label form-control-label">Login</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="login"
+													name="login" required="required"
+													value="${modelLogin.login}">
 											</div>
 										</div>
-										<div class="form-group waves-effect waves-light">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="invalidCheck2" required> <label
-													class="form-check-label" for="invalidCheck2">
-													Concordo com os termos e condições </label>
+
+										<div class="form-group row">
+											<label for="nome"
+												class="col-xs-2 col-form-label form-control-label">Senha</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="password" id="senha"
+													name="senha" required="required" autocomplete="off"
+													value="${modelLogin.senha}">
 											</div>
 										</div>
-										<button class="btn btn-primary" type="submit">Enviar</button>
-								</form>
+
+										<div class="form-group row">
+											<label for="nome"
+												class="col-xs-2 col-form-label form-control-label">
+												Nome</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="nome"
+													name="nome" required="required" value="${modelLogin.nome}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="nome"
+												class="col-xs-2 col-form-label form-control-label">
+												CPF</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="cpf" name="cpf"
+													required="required" value="${modelLogin.cpf}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="snome"
+												class="col-xs-2 col-form-label form-control-label">
+												Sobre Nome</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="snome"
+													name="snome" required="required"
+													value="${modelLogin.snome}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="email"
+												class="col-xs-2 col-form-label form-control-label">
+												Email </label>
+											<div class="col-sm-10">
+												<input class="form-control" type="email" id="email"
+													name="email" required="required" autocomplete="off"
+													value="${modelLogin.email}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="cidade"
+												class="col-xs-2 col-form-label form-control-label">
+												Cidade</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="cidade"
+													name="cidade" value="${modelLogin.cidade}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="estado"
+												class="col-xs-2 col-form-label form-control-label">
+												Estado</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="estado"
+													name="estado" value="${modelLogin.estado}">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="cep"
+												class="col-xs-2 col-form-label form-control-label">
+												CEP</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" id="cep" name="cep"
+													value="${modelLogin.cep}">
+											</div>
+										</div>
+
+										<div>
+											<div class="col-md-2">
+												<button type="button"
+													class="btn btn-primary btn-md btn-block waves-effect"
+													onclick="limparForm();">Novo</button>
+											</div>
+										</div>
+										<div>
+											<div class="col-md-2">
+												<button
+													class="btn btn-primary btn-md btn-block waves-effect">
+													Editar</button>
+											</div>
+										</div>
+										<div>
+											<div class="col-md-2">
+												<button
+													class="btn btn-primary btn-md btn-block waves-effect">
+													Salvar</button>
+											</div>
+										</div>
+										<div>
+											<div class="col-md-2">
+												<button type="button"
+													class="btn btn-primary btn-md btn-block waves-effect"
+													onclick="excluir();">Excluir</button>
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
+						<span>${msg}</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<jsp:include page="javascript.jsp"></jsp:include>
+	
+	<script type="text/javascript">
+	
+		function excluircomAjax() {
+			if (confirm("Deseja Excluir o Resgitro ?")) {
+				
+				var urlAction = document.getElementById("formUser").action;
+				var idUser = document.getELementById("id").value;
+				
+				$.ajax({
+			
+				}).fail(function(xhr, status, errorThrown) {
+					alert('Erro ao deletar usuario por Id:'	
+				})	
+				}
+			
+				
+			
+		}
+	
+
+		function excluir() {
+			if (confirm("Deseja Excluir o Resgitro ?")) {
+
+				document.getElementById("formUser").method = 'get';
+				document.getElementById("acao").value = 'deletar';
+				document.getElementById("formUser").submit();
+			}
+		}
+	
+		function limparForm() {
+			var elementos = document.getElementById("formUser").elements;
+			for (i = 0; i < elementos.length; i++) {
+				elementos[i].value = '';
+
+			}
+
+		}
+	</script>
+
 </body>
 </html>
 

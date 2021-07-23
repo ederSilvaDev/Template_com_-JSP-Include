@@ -373,10 +373,10 @@
 											</div>
 											<div class="col-sm-9"></div>
 										</div> -->
-										<div class="form-group row v-middle">
+										<!-- <div class="form-group row v-middle">
 											<div class="col-sm-12 col-md-6">
 												<div class="card">
-													<!-- <div class="card-header">
+													<div class="card-header">
 														<h5 class="card-header-text">Round Icon</h5>
 														<div class="f-right">
 															<a href="" data-toggle="modal"
@@ -384,20 +384,20 @@
 																class="icofont icofont-code-alt"></i>
 															</a>
 														</div>
-													</div> -->
+													</div>
 													<div class="modal fade modal-flex" id="round-icon-Modal"
 														tabindex="-1" role="dialog">
 														<div class="modal-dialog modal-lg" role="document">
 															<div class="modal-content">
-																<!-- <div class="modal-header">
+																<div class="modal-header">
 																	<button type="button" class="close"
 																		data-dismiss="modal" aria-label="Close">
 																		<span aria-hidden="true">&times;</span>
 																	</button>
 																	<h5 class="modal-title">Code Explanation for Round
 																		Icon Button</h5>
-																</div> -->
-																<!-- end of modal-header -->
+																</div>
+																end of modal-header
 																<div class="modal-body">
 																	/* for Home Icon Button */ &lt;button type="button"
 																	class="btn btn-primary btn-icon waves-effect
@@ -437,13 +437,13 @@
 																	<pre class="brush: html;">
 																	</pre>
 																</div>
-																<!-- end of modal-body -->
+																end of modal-body
 															</div>
-															<!-- end of modal-content -->
+															end of modal-content
 														</div>
-														<!-- end of modal-dialog -->
+														end of modal-dialog
 													</div>
-													<!-- end of modal -->
+													end of modal
 
 													<div class="card-block button-list">
 														<button type="button"
@@ -507,22 +507,22 @@
 															<i class="icofont icofont-server"></i>
 														</button>
 													</div>
-													<!-- end of card-block -->
+													end of card-block
 												</div>
-												<!-- end of card -->
+												end of card
 											</div>
-											<!-- end of col-sm-6 -->
+											end of col-sm-6
 
 
 
 
-											<!-- <div class="col-md-9">
+											<div class="col-md-9">
 												<label for="file" class="custom-file"> <input
 												type="submit" id="gravar"
 												class="btn btn-primary btn-md btn-block waves-effect"></label>
 											</div>
-										 -->
-										</div>
+										
+										</div> -->
 									</form>
 								</div>
 							</div>
